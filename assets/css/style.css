@@ -22,10 +22,15 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   flex: auto;
+  font-family: 'Forum', cursive;
+}
+
+h1,h2,h3 {
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 .container {
-  width: 1200px;
   margin: 0 auto;
   padding: 0 5%;
 }
@@ -52,6 +57,10 @@ body {
   width: 100%;
   min-height: 100%;
   background-color: #3b181e;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
 }
 
 .header__popup_content {
@@ -60,9 +69,7 @@ body {
 }
 
 .header__popup_content .header__body {
-  width: 54%;
-  justify-content: space-between;
-  align-self: flex-end;
+  justify-content: center;
 }
 
 .header__menu {
@@ -83,6 +90,13 @@ body {
   justify-content: center;
 }
 
+.header__link:hover {
+  font-size: 45px;
+  line-height: 50px;
+  color: #fff;
+  transition: 0.5s ease;
+}
+
 .header__list li {
   padding-top: 70px;
   list-style: none;
@@ -99,24 +113,47 @@ body {
 }
 
 .intro h1 {
-  width: 55%;
+  width: 800px;
   height: 264px;
   margin-top: 100px;
   margin-bottom: 80px;
   text-align: center;
+  font-size: 120px;
+  line-height: 132px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.09em;  
 }
 
 .button-watch-1 {
   background: rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  border: 1px solid white;
 }
 
 .button-watch-2 {
   background: white;
   color: black;
+  padding: 20px 30px;
+  border: 1px solid white;
+}
+
+.catalog-button-wrapper {
+  z-index: 1;
+  font-family: Forum;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 13px;
+  letter-spacing: 0.15em;
+  text-align: center;
+  text-transform: uppercase;
+
 }
 
 .catalog-button-wrapper .button-watch-2 {
   display: none;
+
 }
 
 .intro .catalog-button-wrapper:hover .button-watch-1 {
@@ -125,8 +162,6 @@ body {
 
 .intro .catalog-button-wrapper:hover .button-watch-2 {
   display: block;
-  background: white;
-  color: black;
 }
 
 .intro-nav {
@@ -135,6 +170,15 @@ body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  margin-top: -265px;
+  padding: 0 5%;
+}
+
+.social-popup_show {
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+  z-index: 3;
 }
 
 .social-media {
@@ -148,16 +192,25 @@ body {
   align-self: center;
 }
 
-.social-media a {
-  width: 35px;
-  height: 35px;
-  border: 2px solid white;
-  border-radius: 5px;
+.social-media a:hover svg rect {
+  fill: white;
 }
 
-.social-media a:hover {
-  background-color: white;
+.social-media a:hover svg path {
+  stroke: #3B181E;
+  fill: #3B181E;
 }
+
+.social-media a:hover svg circle {
+  stroke: #3B181E;
+  fill: #3B181E;
+}
+
+.inst,.fb,.wsap,.vk {
+  stroke: white;
+}
+
+
 
 .mouse {
   align-self: flex-end;
@@ -168,6 +221,10 @@ body {
 }
 .mouse-2 {
   display: none;
+}
+
+.mouse:hover {
+  cursor: pointer;
 }
 
 .mouse:hover .mouse-1 {
@@ -189,6 +246,38 @@ body {
   position: relative;
   align-items: center;
   margin-top: 170px;
+}
+
+.header__burger:hover{
+  cursor: pointer;
+}
+
+.header__popup_hide {
+  display: none;
+}
+
+.header__link {
+  font-size: 35px;
+  line-height: 39px;
+  letter-spacing: 0.09em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF80;
+}
+
+.header__link:hover {
+  font-family: Forum;
+  color: white;
+}
+
+.header__close-button {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+
+.header__close-button:hover {
+  cursor: pointer;
 }
 
 .catalog .services {
@@ -254,6 +343,10 @@ div {
   font-size: 12px;
   letter-spacing: 2px;
   line-height: 20px;
+}
+
+.watch-cat:hover {
+cursor: pointer;
 }
 
 .button-watch-cat {
